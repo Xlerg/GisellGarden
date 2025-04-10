@@ -1,0 +1,184 @@
+/* Importación de fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+/* Variables globales */
+:root {
+    --bl: #ffffff;
+    --negro: #000000;
+    --fuentesec: "Cinzel", serif;
+    --fuenteprin: "Playfair Display", serif;
+}
+
+/* Estilos generales */
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteprin);
+    font-size: 1.6rem; /* 16px */
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Imágenes */
+img, picture {
+    width: 100%;
+    display: block;
+}
+
+/* Estilos de los encabezados */
+h1, h2, h3, h4 {
+    font-family: var(--fuenteprin);
+    font-weight: 300;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+/* Contenedor general */
+.contenedor {
+    width: 85%;
+    max-width: 160rem;
+    margin: 0 auto;
+}
+.logo{
+    width: 20rem;
+}
+
+/* Header */
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../src/img/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 110rem;
+}
+
+/* Barra de navegación */
+.barra {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    align-items: center;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    color: var(--bl);
+    text-decoration: none;
+    font-size: 2rem;
+    display: block;
+    text-transform: uppercase;
+    margin-right: 2rem;
+}
+
+a:last-of-type {
+    margin-right: 0;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: var(--bl);
+    font-size: 5rem;
+}
+
+.boton {
+    background-color: transparent;
+    padding: 2rem 8rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    border: 2px solid var(--bl);
+    color: var(--bl);
+}
+
+.caracteristicas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin-top: 14rem;
+}
+
+.cuadro{
+    width: 30rem;
+}
+.sub{
+    font-family: var(--fuentesec);
+    font-size: 2.3rem;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (min-width: 768px) {
+    .header {
+        min-height: 70rem;
+    }
+    .barra {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .hero {
+        margin-top: 15rem;
+        font-size: 7rem;
+    }
+    .boton{
+        border: 2px solid var(--negro);
+        color: var(--negro);
+    }
+    
+    .cuadro{
+        width: 35rem;
+    }
+
+}
+
+/* Estilos para pantallas medianas y grandes */
+@media (min-width: 1024px) {
+    .header {
+        height: 130rem;
+    }
+    .navegacion a {
+        font-size: 2.4rem;
+    }
+    .hero {
+        margin-top: 15rem;
+        font-size: 10rem;
+    }
+    .caracteristicas{
+        flex-direction: row;
+        justify-content: center;
+        gap: 10rem;
+        margin-top: 14rem;
+        align-items: start;
+    }
+}
+
+
+
+
